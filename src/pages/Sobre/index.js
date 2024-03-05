@@ -1,9 +1,11 @@
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, Animated } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome, Feather } from '@expo/vector-icons';
 
 export default function Sobre() {
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -21,12 +23,6 @@ export default function Sobre() {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
 
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
-
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
-          
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
-
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
           </Text>
         </View>
         <StatusBar style="auto" />
@@ -38,7 +34,7 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E7E7F1',
+    backgroundColor: '#666',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -60,20 +56,20 @@ const styles = StyleSheet.create({
   },
 
     imgHead: {
-      width: 300,
-      height: 250,
-      borderRadius: 10,
+      width: 320,
+      height: 270,
       position: 'relative',
-      top: -45,
     },
 
     contConteudo: {
-      flex: 1,
+      position:'relative',
       width: 300,
-      backgroundColor: '#fff',
-      zIndex: 1,
-      borderRadius: 10,
-      top: -25,
+      backgroundColor: '#f5f5f5',
+      borderRadius: 25,
+      justifyContent:'center',
+      alignItems:'center',
+      marginLeft: 10,
+      top: -15,
     },
 
     titleSobre: {
@@ -85,8 +81,7 @@ const styles = StyleSheet.create({
 
     titleCont: {
       marginTop: 25,
-      marginLeft: 20,
-      textAlign: 'auto',
+      textAlign: 'justify',
       fontSize: 18,
       width: 270,
     }

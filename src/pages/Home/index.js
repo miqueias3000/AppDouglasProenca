@@ -13,7 +13,9 @@ import { Video } from "expo-av";
 import { StatusBar } from "expo-status-bar";
 
 import {
+  Octicons ,
   Ionicons,
+  FontAwesome,
   FontAwesome5,
   AntDesign,
   Entypo,
@@ -51,53 +53,51 @@ export default function Home({ navigation }) {
               tintColor="#fff"
           />
         </View>
+        
         <View style={styles.contBox}>
 
           <View style={styles.contIcon}>
             <IconWithLabel
-              icon={<Ionicons name="person" size={45} color="#fff" />}
+              icon={<Ionicons name="person" size={40} color="#fff" />}
               label="Sobre"
               onPress={() => navigation.navigate("Sobre")}
             />
 
             <IconWithLabel
-              icon={<Ionicons name="mic-sharp" size={45} color="#fff" />}
+              icon={<Ionicons name="mic-sharp" size={40} color="#fff" />}
               label="PodCast"
-              onPress={() => navigation.navigate("PodCast")}
+              //onPress={() => navigation.navigate("PodCast")}
             />
 
             <IconWithLabel
               icon={
-                <MaterialIcons name="ondemand-video" size={45} color="#fff" />
+                <Ionicons name="book-outline" size={40} color="#fff" />
               }
-              label="Videos"
-              onPress={() => navigation.navigate("Videos")}
+              label="Devocional"
+              //onPress={() => navigation.navigate("Videos")}
             />
 
             <IconWithLabel
-              icon={
-                <MaterialIcons name="multitrack-audio" size={45} color="#fff" />
-              }
-              label="Audios"
-              onPress={() => navigation.navigate("Audios")}
+              icon={<Octicons name="gear" size={40} color="#fff" />}
+              label="Settings"
+              onPress={() => navigation.navigate("Settings")}
             />
 
             <IconWithLabel
-              icon={<MaterialIcons name="event" size={45} color="#fff" />}
+              icon={<MaterialIcons name="event" size={40} color="#fff" />}
               label="Agenda"
-              onPress={() => navigation.navigate("Agenda")}
+              //onPress={() => navigation.navigate("Agenda")}
             />
 
             <IconWithLabel
               icon={
-                <MaterialCommunityIcons name="charity" size={45} color="#fff" />
-              }
-              label="Honra"
-              onPress={() => navigation.navigate("Oferta")}
+                <MaterialCommunityIcons name="seed" size={40} color="#fff" />}
+              label="Semente"
+              //onPress={() => navigation.navigate("Oferta")}
             />
 
             <IconWithLabel
-              icon={<AntDesign name="instagram" size={45} color="#fff" />}
+              icon={<AntDesign name="instagram" size={40} color="#fff" />}
               label="Instagram"
               onPress={() => {
                 Linking.openURL(
@@ -107,7 +107,7 @@ export default function Home({ navigation }) {
             />
 
             <IconWithLabel
-              icon={<Entypo name="youtube" size={45} color="#fff" />}
+              icon={<Entypo name="youtube" size={40} color="#fff" />}
               label="YouTube"
               onPress={() => {
                 Linking.openURL("https://www.youtube.com/@DouglasProenca");
@@ -116,7 +116,7 @@ export default function Home({ navigation }) {
 
             <IconWithLabel
               icon={
-                <FontAwesome5 name="telegram-plane" size={45} color="#fff" />
+                <FontAwesome5 name="telegram-plane" size={40} color="#fff" />
               }
               label="Telegram"
               onPress={() => {
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
 
   overlay: {
     flex: 1,
-    backgroundColor: "rgba(5, 5, 15, 0.7)",
+    backgroundColor: "rgba(5, 5, 15, 0.9)",
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     alignItems: "center", // Centraliza horizontalmente
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 60,
+    gap: 70,
     top: -360,
   },
 
@@ -187,16 +187,16 @@ const styles = StyleSheet.create({
   },
 
   codeLogo: {
-    width: 90,
-    height: 40,
-    bottom: -10,
+    width: 100,
+    height: 50,
+    bottom: -70,
   },
 
   //estilo Logo
   imgLogo: {
     width: 300,
     height: 130,
-    top: -7,
+    top: -30,
     marginLeft: 20,
   },
 });

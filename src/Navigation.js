@@ -5,20 +5,24 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { AntDesign, Ionicons  } from '@expo/vector-icons';
 
 import Sobre from './pages/Sobre';
-import Videos from './pages/Videos';
+import Devocional from './pages/Devocional';
 import Home from './pages/Home';
-import Audios from './pages/Audios';
+import Settings from './pages/Settings';
 import PodCast from './pages/PodCast';
 import Agenda from './pages/Agenda';
-import Oferta from './pages/Oferta';
+import Sementes from './pages/Sementes';
 
 const Stack = createStackNavigator();
 
 const Navigation = () => {
+  
   return (
     <NavigationContainer>
       <Stack.Navigator         
-        screenOptions={{headerShown: true}}
+        screenOptions={{
+          headerShown: true,
+          headerTransparent: true,
+        }}
         initialRouteName="Home"
         >        
 
@@ -39,33 +43,33 @@ const Navigation = () => {
           name="Sobre"
           component={Sobre}
           options={{
-            headerTintColor: 'black',
+            headerTintColor: '#fff',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
-            headerTitle: 'Sobre',
+            headerTitle: '',
             headerTitleAlign: 'center',
             headerTitleStyle: { alignSelf: 'center' },
           }}
         />
 
         <Stack.Screen
-          name="Videos"
-          component={Videos}
+          name="Devocional"
+          component={Devocional}
           options={{
             headerTintColor: 'black',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
-            headerTitle: 'Videos',
+            headerTitle: 'Devocional',
             headerTitleAlign: 'center',
             headerTitleStyle: { alignSelf: 'center' },
           }}
         />
 
         <Stack.Screen
-          name="Audios"
-          component={Audios}
+          name="Settings"
+          component={Settings}
           options={{
             headerTintColor: 'black',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
-            headerTitle: 'Audios',
+            headerTitle: 'Configuração',
             headerTitleAlign: 'center',
             headerTitleStyle: { alignSelf: 'center' },
           }}
@@ -96,14 +100,16 @@ const Navigation = () => {
         />
 
         <Stack.Screen
-          name="Oferta"
-          component={Oferta}
-          options={{
-            headerTintColor: 'black',
+          name="Sementes"
+          component={Sementes}
+          options={{            
+            headerTintColor: '#fff',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
-            headerTitle: 'Oferta',
+            headerTitle: '',
             headerTitleAlign: 'center',
             headerTitleStyle: { alignSelf: 'center' },
+            //headerStyle: { backgroundColor: '#5f9ea0'},
+            //headerShown: false,
           }}
         />
       </Stack.Navigator>

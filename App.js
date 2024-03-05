@@ -1,20 +1,11 @@
-import { useState } from 'react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navigation from './src/Navigation';
-import { SplashScreen } from './src/componentes/SplashScreen';
 
-import { preventAutoHideAsync} from 'expo-splash-screen';
-
-preventAutoHideAsync();
-
-
-export default App = () => {
-
-  const [splashComplete, setSplashComplete] = useState(false);
+function App() {
 
   return (
-    splashComplete
-    ? <Navigation/>
-    : <SplashScreen onComplete={setSplashComplete} />
+    <Navigation />
   );
-};
+}
+
+export default App;
