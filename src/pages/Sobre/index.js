@@ -1,31 +1,71 @@
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image, Animated } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, ImageBackground, Animated, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { FontAwesome, Feather } from '@expo/vector-icons';
+import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+
+const IconWithLabel = ({ icon, label, onPress }) => {
+  return (
+    <TouchableOpacity style={styles.iconContainer} onPress={onPress}>
+      {icon}
+      <Text style={styles.iconLabel}>{label}</Text>
+    </TouchableOpacity>
+  );
+};
 
 export default function Sobre() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
-
-        <View>
-        <Image 
-          source={require('../img/fundoApp-2.jpg')}
-          style={styles.imgHead}/>
-        </View>
-
+      <StatusBar style="light" />
+      <ImageBackground 
+            source={require('../img/fundoApp-2.jpg')}
+            style={styles.imgHead}
+          />
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.contConteudo}>
-          <Text style={styles.titleSobre}>História</Text>
-          <Text style={styles.titleCont}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
-
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
-
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam quos minus consequatur eligendi vero modi nesciunt totam magni pariatur atque voluptas laudantium omnis minima ipsam maiores dolorum dolorem aut ex deserunt, ab velit? Hic beatae repellat fugit odio, illo maxime incidunt? Necessitatibus culpa nam autem quod incidunt cum!
+          <Text style={styles.titleSobre}>Sobre Douglas Proença</Text>
+          <Text style={styles.titleCont}>
+            Douglas Proença, casado há 24 anos com Pamela Proença , pai de Kamilly Evilin, 
+            apaixonadamente engajado no chamado pastoral há mais de 23 anos. Atualmente como Pastor Sênior na Fé e Graça Church em Assis, SP.
+            Fundador do Ministério Fé e Graça e também  da OBG RAIZ , 
+            Formado pelo Rhema Brasil, o maior centro de treinamento bíblico do mundo em Tulsa, Oklahoma, EUA.  
+          </Text>
+          <Text style={styles.titleCont}>
+            Coach Leader, Self Coach, e Analista Comportamental pelo Instituto IBC, integro as melhores 
+            práticas de liderança e desenvolvimento pessoal à missão pastoral, guiando outros a atingirem seu potencial. 
+            Autor do  livro VOCÊ NASCEU PARAR DAR CERTO!
+          </Text>
+          <Text style={styles.titleCont}>
+            Fundador da ESCOFEG, o Centro de Ensino Teológico Avançado, preparo líderes e discípulos com sólido conhecimento 
+            bíblico e aplicação prática. Nossa visão é formar indivíduos equipados com sabedoria, fé e habilidades de liderança,
+          </Text> 
+          <Text style={styles.titleCont}>
+            prontos para fazer a diferença no mundo com o amor e a graça de Deus.
           </Text>
         </View>
-        <StatusBar style="auto" />
+        <Text style={{color: '#fff', fontSize: 18, marginBottom: 15, marginTop: 20, marginLeft: 15,}}>Rede Social</Text>
+        <View style={styles.social}>          
+          <IconWithLabel
+            icon={<AntDesign name="instagram" size={40} color="#f20089" />}
+            label="Instagram"
+            onPress={() => {
+              Linking.openURL(
+                "https://www.instagram.com/douglasproencaoficial/"
+              );
+            }}
+          />
+          <IconWithLabel
+            icon={
+              <FontAwesome5 name="telegram-plane" size={40} color="#26A2E0" />
+            }
+            label="Telegram"
+            onPress={() => {
+              Linking.openURL("https://web.telegram.org/z/");
+            }}
+          />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -34,7 +74,7 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#666',
+    backgroundColor: '#2f184b',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -45,44 +85,51 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
 
-  contHeader: {
-    top: 15,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 15,
+  imgHead: {
+    width: 400,
+    height: 200,
     position: 'relative',
-    zIndex: 1,
-    margin: 5,
   },
 
-    imgHead: {
-      width: 320,
-      height: 270,
-      position: 'relative',
-    },
+  contConteudo: {
+    width: 360,
+    height: 800,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 15,
+    justifyContent:'center',
+    alignItems:'center',
+    top: 20,
+    marginBottom: 20,
+  },
 
-    contConteudo: {
-      position:'relative',
-      width: 300,
-      backgroundColor: '#f5f5f5',
-      borderRadius: 25,
-      justifyContent:'center',
-      alignItems:'center',
-      marginLeft: 10,
-      top: -15,
-    },
+  titleSobre: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 
-    titleSobre: {
-      fontSize: 20,
-      marginLeft: 10,
-      marginTop: 10,
-      fontWeight: 'bold',
-    },
+  titleCont: {
+    marginTop: 8,
+    fontSize: 17,
+    width: 270,
+  },
 
-    titleCont: {
-      marginTop: 25,
-      textAlign: 'justify',
-      fontSize: 18,
-      width: 270,
-    }
-}) ;
+  iconContainer: {
+    alignItems: "center",
+  },
+
+  iconLabel: {
+    color: "#fff",
+    marginTop: 1,
+    fontSize: 12,
+    textAlign: "center",
+  },
+
+  social: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    marginTop: 15,
+    marginBottom: 50,
+    gap: 20,
+  },
+});

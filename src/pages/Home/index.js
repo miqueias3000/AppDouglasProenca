@@ -74,7 +74,7 @@ export default function Home({ navigation }) {
                 <Ionicons name="book-outline" size={40} color="#fff" />
               }
               label="Devocional"
-              //onPress={() => navigation.navigate("Videos")}
+              onPress={() => navigation.navigate("Devocional")}
             />
 
             <IconWithLabel
