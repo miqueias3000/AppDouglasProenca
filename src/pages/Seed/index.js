@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from 'react-native'
 
-export default function Sementes () {
+export default function Seed () {
     return (
         <View style={styles.ContAudio}>
             <Text style={styles.text}>Sementes em breve!</Text>

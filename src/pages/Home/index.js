@@ -92,8 +92,8 @@ export default function Home({ navigation }) {
             <IconWithLabel
               icon={
                 <MaterialCommunityIcons name="seed" size={40} color="#fff" />}
-              label="Semente"
-              //onPress={() => navigation.navigate("Oferta")}
+              label="Sementes"
+              //onPress={() => navigation.navigate("Seed")}
             />
 
             <IconWithLabel

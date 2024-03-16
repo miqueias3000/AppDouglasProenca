@@ -1,8 +1,8 @@
-
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, ImageBackground, Animated, TouchableOpacity } from 'react-native';
+import { Text, View, ScrollView, ImageBackground, Animated, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
+import styles from './styles';
 
 const IconWithLabel = ({ icon, label, onPress }) => {
   return (
@@ -21,7 +21,7 @@ export default function Sobre() {
       <ImageBackground 
             source={require('../img/fundoApp-2.jpg')}
             style={styles.imgHead}
-          />
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.contConteudo}>
           <Text style={styles.titleSobre}>Sobre Douglas Proença</Text>
@@ -70,65 +70,3 @@ export default function Sobre() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#2f184b',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  title:{
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-
-  imgHead: {
-    width: 400,
-    height: 200,
-    position: 'relative',
-  },
-
-  contConteudo: {
-    width: 360,
-    height: 800,
-    backgroundColor: '#f5f5f5',
-    borderRadius: 15,
-    justifyContent:'center',
-    alignItems:'center',
-    top: 20,
-    marginBottom: 20,
-  },
-
-  titleSobre: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-
-  titleCont: {
-    marginTop: 8,
-    fontSize: 17,
-    width: 270,
-  },
-
-  iconContainer: {
-    alignItems: "center",
-  },
-
-  iconLabel: {
-    color: "#fff",
-    marginTop: 1,
-    fontSize: 12,
-    textAlign: "center",
-  },
-
-  social: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    marginTop: 15,
-    marginBottom: 50,
-    gap: 20,
-  },
-});

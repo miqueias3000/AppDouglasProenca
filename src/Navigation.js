@@ -10,7 +10,7 @@ import Home from './pages/Home';
 import Settings from './pages/Settings';
 import PodCast from './pages/PodCast';
 import Agenda from './pages/Agenda';
-import Sementes from './pages/Sementes';
+import Seed from './pages/Seed';
 
 const Stack = createStackNavigator();
 
@@ -55,7 +55,7 @@ const Navigation = () => {
           name="Devocional"
           component={Devocional}
           options={{
-            headerTintColor: 'black',
+            headerTintColor: '#fff',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
             headerTitle: 'Devocional',
             headerTitleAlign: 'center',
@@ -100,8 +100,8 @@ const Navigation = () => {
         />
 
         <Stack.Screen
-          name="Sementes"
-          component={Sementes}
+          name="Seed"
+          component={Seed}
           options={{            
             headerTintColor: '#fff',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
