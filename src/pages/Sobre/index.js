@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, ScrollView, ImageBackground, Animated, TouchableOpacity } from 'react-native';
+import { Text, View, ScrollView, ImageBackground, Animated, TouchableOpacity, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import styles from './styles';

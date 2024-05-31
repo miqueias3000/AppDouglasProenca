@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     modalView: {
       margin: 20,
       backgroundColor: 'white',
-      borderRadius: 20,
+      borderRadius: 5,
       padding: 35,
       alignItems: 'center',
       shadowColor: '#000',
@@ -29,10 +29,11 @@ const styles = StyleSheet.create({
       elevation: 5,
     },
     button: {
-      borderRadius: 15,
+      borderRadius: 5,
       padding: 10,
       elevation: 2,
       marginBottom: 20,
+      top: 15,
     },
     buttonOpen: {
       backgroundColor: '#F194FF',
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     image: {
       width: 340,
       height: 160,
-      borderRadius: 15,
+      borderRadius: 5,
     },
     tituloCard:{
       position: 'absolute',
