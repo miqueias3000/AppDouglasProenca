@@ -78,9 +78,9 @@ export default function Home({ navigation }) {
             />
 
             <IconWithLabel
-              icon={<MaterialIcons name="event" size={40} color="#fff" />}
-              label="Agenda"
-              //onPress={() => navigation.navigate("Agenda")}
+              icon={<AntDesign name="playcircleo" size={40} color="#fff" />}
+              label="Videos"
+              onPress={() => navigation.navigate("Videos")}
             />
 
             <IconWithLabel

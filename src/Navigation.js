@@ -9,7 +9,7 @@ import Devocional from './pages/Devocional';
 import Home from './pages/Home';
 import Settings from './pages/Settings';
 import PodCast from './pages/PodCast';
-import Agenda from './pages/Agenda';
+import Videos from './pages/Videos';
 import Seed from './pages/Seed';
 
 const Stack = createStackNavigator();
@@ -88,12 +88,12 @@ const Navigation = () => {
         />
 
         <Stack.Screen
-          name="Agenda"
-          component={Agenda}
+          name="Videos"
+          component={Videos}
           options={{
             headerTintColor: 'black',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
-            headerTitle: 'agenda',
+            headerTitle: 'Videos',
             headerTitleAlign: 'center',
             headerTitleStyle: { alignSelf: 'center' },
           }}
