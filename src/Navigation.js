@@ -91,7 +91,7 @@ const Navigation = () => {
           name="Videos"
           component={Videos}
           options={{
-            headerTintColor: 'black',
+            headerTintColor: '#fff',
             headerBackTitle: 'Voltar', // Defina o texto desejado aqui
             headerTitle: 'Videos',
             headerTitleAlign: 'center',

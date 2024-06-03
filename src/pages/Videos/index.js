@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { View, ImageBackground, ScrollView } from 'react-native';
 import YoutubePlayer from "react-native-youtube-iframe";
 import { styles } from "./styles";
-import { ScrollView } from "react-native-gesture-handler";
 
 export default function Videos() {
     const [playing, setPlaying] = useState(false);
@@ -15,51 +15,61 @@ export default function Videos() {
 
     return (
         <View style={styles.container}>
-            <ScrollView>
-                <YoutubePlayer
-                    style={styles.video}
-                    height={300}
-                    width={350}
-                    play={playing}
-                    videoId={"GAEh0w6iJ7A"}
-                    onChangeState={onStateChange}
-                />
+            <StatusBar style="light" />
+            <ImageBackground 
+                source={require('../img/bkg.png')}
+                style={styles.imgHead}
+            />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.videoContainer}>
+                    <YoutubePlayer
+                        height={300}
+                        width={350}
+                        play={playing}
+                        videoId={"GAEh0w6iJ7A"}
+                        onChangeState={onStateChange}
+                    />
+                </View>
 
-                <YoutubePlayer
-                    style={styles.video}
-                    height={300}
-                    width={350}
-                    play={playing}
-                    videoId={"A67L_4Eg0bc"}
-                    onChangeState={onStateChange}
-                />
+                <View style={styles.videoContainer}>
+                    <YoutubePlayer
+                        height={300}
+                        width={350}
+                        play={playing}
+                        videoId={"A67L_4Eg0bc"}
+                        onChangeState={onStateChange}
+                    />
+                </View>
 
-                <YoutubePlayer
-                    style={styles.video}
-                    height={300}
-                    width={350}
-                    play={playing}
-                    videoId={"sDm3HXwu3Pk"}
-                    onChangeState={onStateChange}
-                />
+                <View style={styles.videoContainer}>
+                    <YoutubePlayer
+                        height={300}
+                        width={350}
+                        play={playing}
+                        videoId={"sDm3HXwu3Pk"}
+                        onChangeState={onStateChange}
+                    />
+                </View>
 
-                <YoutubePlayer
-                    style={styles.video}
-                    height={300}
-                    width={350}
-                    play={playing}
-                    videoId={"Pz9rcR7geOg"}
-                    onChangeState={onStateChange}
-                />
+                <View style={styles.videoContainer}>
+                    <YoutubePlayer
+                        height={300}
+                        width={350}
+                        play={playing}
+                        videoId={"Pz9rcR7geOg"}
+                        onChangeState={onStateChange}
+                    />
+                </View>
 
-                <YoutubePlayer
-                    style={styles.video}
-                    height={300}
-                    width={350}
-                    play={playing}
-                    videoId={"4bB4zE3gA1Y"}
-                    onChangeState={onStateChange}
-                />
+                <View style={styles.videoContainer}>
+                    <YoutubePlayer
+                        height={300}
+                        width={350}
+                        play={playing}
+                        videoId={"4bB4zE3gA1Y"}
+                        onChangeState={onStateChange}
+                    />
+                </View>
             </ScrollView>
         </View>
     );
