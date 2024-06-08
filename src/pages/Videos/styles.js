@@ -12,8 +12,9 @@ export const styles = StyleSheet.create({
         top: 30,
     },
     imgHead: {
-        width: 400,
-        height: 200,
+        width: 395,
+        height: 120,
         position: 'relative',
+        marginBottom: 15,
     },
 });

@@ -78,7 +78,7 @@ export default function Settings() {
           />  
         </View>
         <View style={styles.infoContainer}>
-          <Text style={styles.infoText}>Versão: 0.0.1</Text>
+          <Text style={styles.infoText}>Versão: 1.0.0</Text>
           <Text style={styles.infoText}>Desenvolvido por: CodeTech</Text>
         </View>
       </View>

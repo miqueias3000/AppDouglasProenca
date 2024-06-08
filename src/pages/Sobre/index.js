@@ -26,13 +26,13 @@ export default function Sobre() {
         <View style={styles.contConteudo}>
           <Text style={styles.titleSobre}>Sobre Douglas Proença</Text>
           <Text style={styles.titleCont}>
-            Douglas Proença, casado há 24 anos com Pamela Proença , pai de Kamilly Evilin, 
+            Douglas Proença, casado há 24 anos com Pamela Proença , pai de Kamilly Evelin, 
             apaixonadamente engajado no chamado pastoral há mais de 23 anos. Atualmente como Pastor Sênior na Fé e Graça Church em Assis, SP.
-            Fundador do Ministério Fé e Graça e também  da OBG RAIZ , 
+            Fundador do Ministério Fé e Graça e também  da ONG RAIZ , 
             Formado pelo Rhema Brasil, o maior centro de treinamento bíblico do mundo em Tulsa, Oklahoma, EUA.  
           </Text>
           <Text style={styles.titleCont}>
-            Coach Leader, Self Coach, e Analista Comportamental pelo Instituto IBC, integro as melhores 
+            Coach Leader, Self Coach, e Analista Comportamental pelo Instituto IBC, apto as melhores 
             práticas de liderança e desenvolvimento pessoal à missão pastoral, guiando outros a atingirem seu potencial. 
             Autor do  livro VOCÊ NASCEU PARAR DAR CERTO!
           </Text>
